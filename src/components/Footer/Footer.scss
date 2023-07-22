@@ -22,6 +22,11 @@
             }
         }
 
+        &-logo {
+            text-decoration: none;
+            color: $HandFix-Orange;
+        }
+
         @include tablet {
             display: flex;
             flex-direction: row;
