@@ -1,7 +1,8 @@
 import "./HomePage.scss";
+import Hero from "../../components/Hero/Hero";
 
 function HomePage() {
-  return <>This is the Home Page.</>;
+  return <Hero />;
 }
 
 export default HomePage;
