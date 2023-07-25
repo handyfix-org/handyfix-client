@@ -4,7 +4,7 @@
 .hero {
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  margin-top: 1.5rem;
   gap: 2rem;
   flex-direction: column;
   padding: 0 1rem;
@@ -52,7 +52,7 @@
     font-size: 1.1rem;
     margin-top: 1rem;
     border: 1px solid $HandFix-Orange;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     text-align: center;
     padding: 0.8rem 2rem;
     transition: background-color 0.3s ease;
