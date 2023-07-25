@@ -1,0 +1,76 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+    @include phone {
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+    }
+
+
+    &__logo-logo{
+        height: 5.62rem;
+        padding-left: 5rem;
+
+        @include phone {
+            padding: 0;
+        }
+        
+    }
+
+    
+    &__menu {
+        display: flex;
+        padding-right: 5rem;
+        
+
+        @include phone {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+        padding: 0;
+         background-color: black;
+         color: white;
+        }
+   
+        &-item:hover{
+            color: orange;
+        }
+
+        &-container-large{
+            display: flex;
+            gap: 0.5rem;
+            margin-right: 1rem;
+
+            @include phone {
+            
+            
+            }
+        }
+
+        &-container-short{
+            display: flex;
+            gap: 0.5rem;
+            border-left: .3125rem solid orange;
+            padding-left: 1rem;
+
+            @include phone {
+            border-left: none;
+            padding-left: 0;
+            }
+
+
+        }
+    }
+}
