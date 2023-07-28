@@ -19,12 +19,9 @@ const Footer : React.FC<FooterProps> = ({logo, features, paragraph}) =>{
     <div className="footer__feature">
       <div>
     <Link to="/" className="footer__feature-logo">
-
     <h3 className="footer__feature-title-mobile">{logo} HANDYFIX</h3>
     </Link>
     </div>
-
-  
     <p className="footer__feature-title">{features} Product</p>
     <p className="footer__feature-title">{features} Features</p>
     <p className="footer__feature-title">{features} Resources</p>

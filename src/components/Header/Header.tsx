@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./Header.scss";
 import Logo from "../../assets/icons/handfix.png";
 
@@ -7,7 +7,7 @@ const Header = () => {
 
   const handleMobileMenuToggle = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    console.log('isMobileMenuOpen:', isMobileMenuOpen);
+    // console.log('isMobileMenuOpen:', isMobileMenuOpen);
   };
   
 
