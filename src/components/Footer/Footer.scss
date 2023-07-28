@@ -17,17 +17,63 @@
         padding: 3rem 0rem;
     }
 
+    @include phone {
+        
+        justify-content: center;
+        background-color: #f2f2f2;
+        
+        
+    }
+
+ 
+
     &__feature {
 
+        @include phone {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            align-items: flex-start;
+            margin-left: 2rem;
+        }
+        
         &-title {
+
+            &-mobile {
+                margin-top: 1rem;
+            }
+
+            @include tablet {
+                &-mobile {
+            
+                    display: none;
+
+               
+                }
+            }
+
+          
+
+            @include phone {
+                &-desktop{
+                    display: none;
+                }
+            }
             &:hover {
                 border-bottom: .125rem solid $HandFix-Orange;
+
+                @include phone {
+                    color: $HandFix-Orange;
+                }
             }
         }
 
         &-logo {
             text-decoration: none;
             color: $HandFix-Orange;
+
+          
         }
 
         @include tablet {
@@ -40,23 +86,41 @@
         }
 
         @include desktop;
-        @include desktop-margin;
+        
     }
 
     &__icon {
         @include tablet {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 5rem;
+
+    
         }
 
+        @include phone {
+            margin-top: 1rem;
+            margin-left: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem
+        }
+
+      
+
         @include desktop;
-        @include desktop-margin;
+        
 
         &-facebook,
         &-youtube,
         &-instagram,
         &-twitter {
+
+            @media only screen and (max-width: 766px) and (min-width: 426px)  {
+                width: 3rem;
+                height: 3rem;
+            }
+
             @include tablet {
                 width: 3rem;
                 height: 3rem;
@@ -73,6 +137,11 @@
         @include tablet {
             font-size: .75rem;
             align-self: center;
+        }
+
+        @include phone {
+        margin-top: 1rem;
+         text-align: center;
         }
     }
 }

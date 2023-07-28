@@ -14,12 +14,22 @@ type FooterProps = {
 
 const Footer : React.FC<FooterProps> = ({logo, features, paragraph}) =>{
   return <footer className="footer">
+
+    
     <div className="footer__feature">
+      <div>
+    <Link to="/" className="footer__feature-logo">
+
+    <h3 className="footer__feature-title-mobile">{logo} HANDYFIX</h3>
+    </Link>
+    </div>
+
+  
     <p className="footer__feature-title">{features} Product</p>
     <p className="footer__feature-title">{features} Features</p>
     <p className="footer__feature-title">{features} Resources</p>
     <Link to="/" className="footer__feature-logo">
-    <h3>{logo} HANDYFIX</h3>
+    <h3 className="footer__feature-title-desktop">{logo} HANDYFIX</h3>
     </Link>
     <p className="footer__feature-title">{features} About</p>
     <p className="footer__feature-title">{features} Blog</p>

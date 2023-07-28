@@ -1,32 +1,48 @@
-
-
+import React, { useState } from 'react';
 import "./Header.scss";
 import Logo from "../../assets/icons/handfix.png";
 
-function Header() {
-  return <nav className="header">
-    <div className="header__logo">
-      <img src={Logo} className="header__logo-logo"/>
-    </div>
-    <ul className="header__menu">
-      <div className="header__menu-container-large">
-      <li className="header__menu-item">Project</li>
-      <li className="header__menu-item">Worker</li>
-      <li className="header__menu-item">Services</li>
-      <li className="header__menu-item">Contact</li>
-      </div>
+const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-      <div className="header__menu-container-short">
-        <li className="header__menu-item">Login</li>
-        <li className="header__menu-item header__menu-item-signup">Sign up</li>
-      </div>
-    </ul>
-  </nav>
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    console.log('isMobileMenuOpen:', isMobileMenuOpen);
+  };
+  
 
+  return (
+    <header className="header">
+      <nav className="navbar">
+        <div className="navbar-brand">
+          <img src={Logo} alt="Logo" className="logo" />
+        </div>
 
+        <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a href="#" className="nav-link">Product</a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link">Services</a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link">Login</a>
+            </li>
+            <li className="nav-item">
+              <a href="#" className="nav-link">Sign in</a>
+            </li>
+          </ul>
+        </div>
 
-
-
-}
+        <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`} onClick={handleMobileMenuToggle}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;
